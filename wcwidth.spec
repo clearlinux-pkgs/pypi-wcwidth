@@ -4,7 +4,7 @@
 #
 Name     : wcwidth
 Version  : 0.1.7
-Release  : 1
+Release  : 2
 URL      : https://pypi.python.org/packages/55/11/e4a2bb08bb450fdbd42cc709dd40de4ed2c472cf0ccb9e64af22279c5495/wcwidth-0.1.7.tar.gz
 Source0  : https://pypi.python.org/packages/55/11/e4a2bb08bb450fdbd42cc709dd40de4ed2c472cf0ccb9e64af22279c5495/wcwidth-0.1.7.tar.gz
 Summary  : Measures number of Terminal column cells of wide-character codes
@@ -35,7 +35,7 @@ python components for the wcwidth package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1485746908
+export SOURCE_DATE_EPOCH=1488922533
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -45,7 +45,7 @@ export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test
 %install
-export SOURCE_DATE_EPOCH=1485746908
+export SOURCE_DATE_EPOCH=1488922533
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
