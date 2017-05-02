@@ -4,7 +4,7 @@
 #
 Name     : wcwidth
 Version  : 0.1.7
-Release  : 2
+Release  : 3
 URL      : https://pypi.python.org/packages/55/11/e4a2bb08bb450fdbd42cc709dd40de4ed2c472cf0ccb9e64af22279c5495/wcwidth-0.1.7.tar.gz
 Source0  : https://pypi.python.org/packages/55/11/e4a2bb08bb450fdbd42cc709dd40de4ed2c472cf0ccb9e64af22279c5495/wcwidth-0.1.7.tar.gz
 Summary  : Measures number of Terminal column cells of wide-character codes
