@@ -4,9 +4,9 @@
 #
 Name     : wcwidth
 Version  : 0.1.7
-Release  : 3
-URL      : https://pypi.python.org/packages/55/11/e4a2bb08bb450fdbd42cc709dd40de4ed2c472cf0ccb9e64af22279c5495/wcwidth-0.1.7.tar.gz
-Source0  : https://pypi.python.org/packages/55/11/e4a2bb08bb450fdbd42cc709dd40de4ed2c472cf0ccb9e64af22279c5495/wcwidth-0.1.7.tar.gz
+Release  : 4
+URL      : http://pypi.debian.net/wcwidth/wcwidth-0.1.7.tar.gz
+Source0  : http://pypi.debian.net/wcwidth/wcwidth-0.1.7.tar.gz
 Summary  : Measures number of Terminal column cells of wide-character codes
 Group    : Development/Tools
 License  : MIT
@@ -34,8 +34,11 @@ python components for the wcwidth package.
 %setup -q -n wcwidth-0.1.7
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1488922533
+export SOURCE_DATE_EPOCH=1503083184
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
@@ -43,16 +46,20 @@ python3 setup.py build -b py3
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test
+PYTHONPATH=%{buildroot}/usr/lib/python3.6/site-packages python3 setup.py test
 %install
-export SOURCE_DATE_EPOCH=1488922533
+export SOURCE_DATE_EPOCH=1503083184
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+echo ----[ mark ]----
+cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
+echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
 
 %files python
 %defattr(-,root,root,-)
-/usr/lib/python*/*
+/usr/lib/python2*/*
+/usr/lib/python3*/*
