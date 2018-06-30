@@ -4,17 +4,17 @@
 #
 Name     : wcwidth
 Version  : 0.1.7
-Release  : 14
+Release  : 15
 URL      : http://pypi.debian.net/wcwidth/wcwidth-0.1.7.tar.gz
 Source0  : http://pypi.debian.net/wcwidth/wcwidth-0.1.7.tar.gz
 Summary  : Measures number of Terminal column cells of wide-character codes
 Group    : Development/Tools
 License  : MIT
 Requires: wcwidth-python3
+Requires: wcwidth-license
 Requires: wcwidth-python
 BuildRequires : pbr
 BuildRequires : pip
-
 BuildRequires : python3-dev
 BuildRequires : setuptools
 
@@ -22,6 +22,14 @@ BuildRequires : setuptools
 .. image:: https://img.shields.io/travis/jquast/wcwidth.svg
 :target: https://travis-ci.org/jquast/wcwidth
 :alt: Travis Continous Integration
+
+%package license
+Summary: license components for the wcwidth package.
+Group: Default
+
+%description license
+license components for the wcwidth package.
+
 
 %package python
 Summary: python components for the wcwidth package.
@@ -49,16 +57,18 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1522283839
+export SOURCE_DATE_EPOCH=1530331150
 python3 setup.py build -b py3
 
 %check
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-PYTHONPATH=%{buildroot}/usr/lib/python3.6/site-packages python3 setup.py test
+PYTHONPATH=%{buildroot}/usr/lib/python3.7/site-packages python3 setup.py test
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/doc/wcwidth
+cp LICENSE.txt %{buildroot}/usr/share/doc/wcwidth/LICENSE.txt
 python3 -tt setup.py build -b py3 install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -66,6 +76,10 @@ echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
+
+%files license
+%defattr(-,root,root,-)
+/usr/share/doc/wcwidth/LICENSE.txt
 
 %files python
 %defattr(-,root,root,-)
