@@ -4,7 +4,7 @@
 #
 Name     : wcwidth
 Version  : 0.1.7
-Release  : 17
+Release  : 18
 URL      : http://pypi.debian.net/wcwidth/wcwidth-0.1.7.tar.gz
 Source0  : http://pypi.debian.net/wcwidth/wcwidth-0.1.7.tar.gz
 Summary  : Measures number of Terminal column cells of wide-character codes
