@@ -1,5 +1,5 @@
 PKG_NAME := wcwidth
-URL = https://files.pythonhosted.org/packages/25/9d/0acbed6e4a4be4fc99148f275488580968f44ddb5e69b8ceb53fc9df55a0/wcwidth-0.1.9.tar.gz
+URL = https://files.pythonhosted.org/packages/89/38/459b727c381504f361832b9e5ace19966de1a235d73cdbdea91c771a1155/wcwidth-0.2.5.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
