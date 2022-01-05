@@ -1,8 +1,6 @@
 # This file contains recursive sources that require this package
 PyICU
+ansible
 bash_kernel
-cmd2
 ipython
-prompt_toolkit
 python-tabulate
-python-zstandard
