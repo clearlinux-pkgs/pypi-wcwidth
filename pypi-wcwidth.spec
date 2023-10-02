@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-wcwidth
-Version  : 0.2.7
-Release  : 57
-URL      : https://files.pythonhosted.org/packages/7c/67/31b3c1411efeb4b95e0a1c63c263c07676c49f59375d31a21b11ff16f9dc/wcwidth-0.2.7.tar.gz
-Source0  : https://files.pythonhosted.org/packages/7c/67/31b3c1411efeb4b95e0a1c63c263c07676c49f59375d31a21b11ff16f9dc/wcwidth-0.2.7.tar.gz
+Version  : 0.2.8
+Release  : 58
+URL      : https://files.pythonhosted.org/packages/cb/ee/20850e9f388d8b52b481726d41234f67bc89a85eeade6e2d6e2965be04ba/wcwidth-0.2.8.tar.gz
+Source0  : https://files.pythonhosted.org/packages/cb/ee/20850e9f388d8b52b481726d41234f67bc89a85eeade6e2d6e2965be04ba/wcwidth-0.2.8.tar.gz
 Summary  : Measures the displayed width of unicode strings in a terminal
 Group    : Development/Tools
 License  : MIT
@@ -60,10 +60,10 @@ python3 components for the pypi-wcwidth package.
 
 
 %prep
-%setup -q -n wcwidth-0.2.7
-cd %{_builddir}/wcwidth-0.2.7
+%setup -q -n wcwidth-0.2.8
+cd %{_builddir}/wcwidth-0.2.8
 pushd ..
-cp -a wcwidth-0.2.7 buildavx2
+cp -a wcwidth-0.2.8 buildavx2
 popd
 
 %build
@@ -71,7 +71,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1695999295
+export SOURCE_DATE_EPOCH=1696263415
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
