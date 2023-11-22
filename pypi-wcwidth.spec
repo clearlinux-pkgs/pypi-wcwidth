@@ -6,10 +6,10 @@
 # autospec commit: e661f3a
 #
 Name     : pypi-wcwidth
-Version  : 0.2.10
-Release  : 61
-URL      : https://files.pythonhosted.org/packages/2e/1c/21f2379555bba50b54e5a965d9274602fe2bada4778343d5385840f7ac34/wcwidth-0.2.10.tar.gz
-Source0  : https://files.pythonhosted.org/packages/2e/1c/21f2379555bba50b54e5a965d9274602fe2bada4778343d5385840f7ac34/wcwidth-0.2.10.tar.gz
+Version  : 0.2.12
+Release  : 62
+URL      : https://files.pythonhosted.org/packages/d7/12/63deef355537f290d5282a67bb7bdd165266e4eca93cd556707a325e5a24/wcwidth-0.2.12.tar.gz
+Source0  : https://files.pythonhosted.org/packages/d7/12/63deef355537f290d5282a67bb7bdd165266e4eca93cd556707a325e5a24/wcwidth-0.2.12.tar.gz
 Summary  : Measures the displayed width of unicode strings in a terminal
 Group    : Development/Tools
 License  : MIT
@@ -62,10 +62,10 @@ python3 components for the pypi-wcwidth package.
 
 
 %prep
-%setup -q -n wcwidth-0.2.10
-cd %{_builddir}/wcwidth-0.2.10
+%setup -q -n wcwidth-0.2.12
+cd %{_builddir}/wcwidth-0.2.12
 pushd ..
-cp -a wcwidth-0.2.10 buildavx2
+cp -a wcwidth-0.2.12 buildavx2
 popd
 
 %build
@@ -73,7 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1699921074
+export SOURCE_DATE_EPOCH=1700611685
 export GCC_IGNORE_WERROR=1
 CLEAR_INTERMEDIATE_CFLAGS="$CLEAR_INTERMEDIATE_CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 CLEAR_INTERMEDIATE_FCFLAGS="$CLEAR_INTERMEDIATE_FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
