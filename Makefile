@@ -1,5 +1,5 @@
 PKG_NAME := pypi-wcwidth
-URL = https://files.pythonhosted.org/packages/d7/12/63deef355537f290d5282a67bb7bdd165266e4eca93cd556707a325e5a24/wcwidth-0.2.12.tar.gz
+URL = https://files.pythonhosted.org/packages/6c/63/53559446a878410fc5a5974feb13d31d78d752eb18aeba59c7fef1af7598/wcwidth-0.2.13.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
