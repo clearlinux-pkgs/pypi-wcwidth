@@ -7,7 +7,7 @@
 #
 Name     : pypi-wcwidth
 Version  : 0.2.13
-Release  : 65
+Release  : 66
 URL      : https://files.pythonhosted.org/packages/6c/63/53559446a878410fc5a5974feb13d31d78d752eb18aeba59c7fef1af7598/wcwidth-0.2.13.tar.gz
 Source0  : https://files.pythonhosted.org/packages/6c/63/53559446a878410fc5a5974feb13d31d78d752eb18aeba59c7fef1af7598/wcwidth-0.2.13.tar.gz
 Summary  : Measures the displayed width of unicode strings in a terminal
